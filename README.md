@@ -1,11 +1,12 @@
-ASP.NET Core 구현 X 
+# ASP.NET Core 구현 X 
 <br/>
-Native C#
+# Native C#
 <br/>
 <br/>
 <br/>
-<h1>< SpringBoot 대응점 ><h1/>
+## <SpringBoot 대응점>
 <br/>
+```txt
 Program.cs = Controller
 
 ProductService = ServiceImpl
@@ -20,3 +21,22 @@ Product = Entity
 
 ProductCreateRequest / ProductUpdateRequest / ProductResponse
 = RequestDto / ResponseDto
+```
+
+## 프로젝트 구조
+
+```txt
+CSharpProductPractice
+├─ Program.cs
+├─ Models
+│  └─ Product.cs
+├─ DTOs
+│  ├─ ProductCreateRequest.cs
+│  ├─ ProductUpdateRequest.cs
+│  └─ ProductResponse.cs
+├─ Repositories
+│  ├─ IProductRepository.cs
+│  └─ ProductRepository.cs
+└─ Services
+   ├─ IProductService.cs
+   └─ ProductService.cs
