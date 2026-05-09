@@ -1,6 +1,6 @@
 namespace CSharpProductPractice.DTOs;
 
-public class ProuductCreateRequest
+public class ProductCreateRequest
 {
     public string Name { get; set; } = "";
     public int Price { get; set; }

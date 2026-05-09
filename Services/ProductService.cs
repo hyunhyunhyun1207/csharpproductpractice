@@ -39,7 +39,7 @@ public class ProductService : IProductService
         return ToResponse(product);
     }
 
-    public ProductResponse CreateProduct(ProuductCreateRequest request)
+    public ProductResponse CreateProduct(ProductCreateRequest request)
     {
         ValidateProductRequest(request.Name, request.Price, request.StockQty);
 
@@ -84,6 +84,18 @@ public class ProductService : IProductService
         return product;
     }
 
+    public ProductResponse ManageStock(int id, int qty)
+    {
+        ValidateStockQty(qty);
+
+        Product product = GetProductOrThrow(id);
+
+        product.ManageStock(qty);
+
+        return ToResponse(product);
+    }
+
+
     // 서비스 검증 항목
     // 상품명이 비었거나 가격, 수량이 이상하면 예외처리
     private void ValidateProductRequest(string name, int price, int stockQty)
@@ -115,6 +127,14 @@ public class ProductService : IProductService
             StockQty = product.StockQty,
             IsActive = product.IsActive
         };
+    }
+
+    private void ValidateStockQty(int qty)
+    {
+        if (qty == 0)
+        {
+            throw new ArgumentException("0이 아닌 숫자 양수, 음수의 값을 입력해주세요.");
+        }
     }
 
 }

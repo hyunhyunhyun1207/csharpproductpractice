@@ -21,18 +21,14 @@ public class Product(int id, string name, int price, int stockQty)
         IsActive = false;
     }
 
-    public void IncreaseStock(int qty)
+    public void ManageStock(int qty)
     {
-        StockQty += qty;
-    }
-
-    public void DecreaseStock(int qty)
-    {
-        if (StockQty < qty)
+        if (StockQty + qty < 0)
         {
             throw new InvalidOperationException("재고가 부족합니다.");
         }
 
-        StockQty -= qty;
+        StockQty += qty;
+        
     }
 }
