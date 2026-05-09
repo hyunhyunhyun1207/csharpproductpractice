@@ -3,7 +3,7 @@
 # Native C#
 <br/>
 
-## <SpringBoot 대응점>
+## SpringBoot 대응점
 ```bash
 Program.cs = Controller
 
