@@ -1,5 +1,3 @@
-# ASP.NET Core 구현 X 
-<br/>
 # Native C#
 <br/>
 
