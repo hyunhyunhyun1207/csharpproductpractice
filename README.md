@@ -1,6 +1,6 @@
 ASP.NET Core 구현 X 
 <br/>
-기초 C# 문법
+Native C#
 <br/>
 <br/>
 <br/>
