@@ -19,7 +19,7 @@ Product = Entity
 
 ProductCreateRequest / ProductUpdateRequest / ProductResponse
 = RequestDto / ResponseDto
-
+```
 
 ## 프로젝트 구조
 
