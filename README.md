@@ -21,7 +21,7 @@ ProductCreateRequest / ProductUpdateRequest / ProductResponse
 
 ## 프로젝트 구조
 
-
+```txt
 CSharpProductPractice
 ├─ Program.cs
 ├─ Models
@@ -36,3 +36,4 @@ CSharpProductPractice
 └─ Services
    ├─ IProductService.cs
    └─ ProductService.cs
+```
